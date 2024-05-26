@@ -21,7 +21,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            width: 400px;
+          max-width: 90%;
             text-align: left;
             position: absolute;
             display: flex;
@@ -128,28 +128,32 @@
             flex-direction: column;
         }
 
-        .history-item .actions button {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            padding: 5px;
-            transition: background-color 0.3s;
-            margin-top: 5px;
-        }
+       .history-item .actions button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
 
         .history-item .actions button:hover {
             background-color: #555;
         }
 
-        .history-item .dots {
-            cursor: pointer;
-        }
+    
 
-        .history-item .dots:hover + .actions,
-        .history-item .actions:hover {
-            display: flex;
-        }
+     
+
+        @media only screen and (max-width: 600px) {
+    .container,
+    .history-container {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
+        .history-item .actions .delete {
+    margin-bottom: 5px; /* Add margin to the bottom of the delete button */
+}
     </style>
 </head>
 <body>
